@@ -6,7 +6,8 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-#wrap {
+/*取id*/
+#wrap {   
     display: flex;
     width: 100%;
     height: 100%;
@@ -14,6 +15,12 @@ html, body {
     align-items: center;
     display: flex;
 }
+
+/*Css選擇器(1-5)*/
+
+/*1.指定id為wrap的元素,元素選擇器
+div可換為其他任何元素並是子對象選擇器
+(只管直接的子層)*/
 #wrap > div {
     position: fixed;
     text-align: center;
@@ -24,6 +31,11 @@ html, body {
     transform: scale(.5);
 }
 
+/*2.指定id為wrap的元素,
+並是子對象選擇器(只管直接的子層),
+元素選擇器div可換為其他任何元素
+(指定div為active的元素)
+*/
 #wrap > div.active {
     opacity: 1;
     pointer-events: auto;
@@ -32,6 +44,9 @@ html, body {
     transform: scale(1);
 }
 
+/*3.指定id為wrap的元素,
+並是子對象選擇器id是gamePlay
+(只管直接的子層)*/
 #wrap > #gamePlay {
     opacity: 1;
     z-index: 0;
@@ -39,6 +54,12 @@ html, body {
     filter: blur(0);
 }
 
+/*4.指定id為wrap的元素,
+並是子對象選擇器(只管直接的子層),
+元素選擇器div可換為其他任何元素
+(指定div為active的元素)
+相鄰兄弟選擇器,選擇所有的相鄰 (id為gamePlay)元素
+*/
 #wrap > div.active ~ #gamePlay {
     opacity: .75;
     filter: blur(10px);
@@ -61,6 +82,7 @@ button {
     opacity: .75;
     cursor: pointer;
 }
+/*5.滑鼠游標移至button元素時*/
 button:hover {
     opacity: 1;
 }
