@@ -27,7 +27,7 @@ var canvas = document.getElementById('gameCanvas'),
     gameMessage = document.getElementById('gameMessage'),
     gamePaused = false,
     gameInProgress = false,
-    scoreToWin = 10,
+    scoreToWin = 5,
     difficultyLevel = 1,
     gameInterval = window.setInterval(function() {});
 
