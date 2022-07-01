@@ -17,9 +17,9 @@ html, body {
     display: flex;
 }
 
-/*2.指定id為wrap的元素,元素選擇器
-div可換為其他任何元素並是子對象選擇器
-(只管直接的子層)*/
+/*2.指定id為wrap的元素並是子對象選擇器
+(只管直接的子層),元素選擇器
+div可換為其他任何元素*/
 #wrap > div {
     position: fixed;
     text-align: center;
