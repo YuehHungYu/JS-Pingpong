@@ -19,7 +19,7 @@ var canvas = document.getElementById('gameCanvas'),
     startMenu = document.getElementById('startMenu'),
     pauseMenu = document.getElementById('pauseMenu'),
     gameOverMenu = document.getElementById('gameOverMenu'),
-    gameplay = document.getElementById('gamePlay'),
+    gamePlay = document.getElementById('gamePlay'),
     startBtn = document.getElementById('startBtn'),
     continueBtn = document.getElementById('continueBtn'),
     restartBtn = document.getElementById('restartBtn'),
@@ -48,7 +48,7 @@ document.addEventListener('keyup', keyUp);
 
 startMenu.className = 'active';
 pauseMenu.className = '';
-gameplay.className = '';
+gamePlay.className = '';
 gameOverMenu.className = '';
 
 window.onblur = function() {
@@ -91,7 +91,7 @@ function togglePause() {
 function pauseGame() {
     if(!gamePaused) {
     gamePaused = true;
-    gameplay.className = '';
+    gamePlay.className = '';
     pauseMenu.className = 'active';
     clearInterval(gameInterval);
     }
@@ -100,7 +100,7 @@ function pauseGame() {
 function resumeGame() {
     if(gamePaused) {
         gamePaused = false;
-        gameplay.className = '';
+        gamePlay.className = '';
         pauseMenu.className = ''; 
         startGame();
     }
@@ -159,7 +159,7 @@ function gameOver(playerWon) {
         gameMessage.textContent = 'Oh snap, you lost.';
         againBtn.textContent = 'Try again';
     }
-    gameplay.className = '';
+    gamePlay.className = '';
     gameOverMenu.className = 'active'; 
 }
 
